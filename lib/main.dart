@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                               Text(
-                                'Mensagem recebida: ${valueWS['value']}',
+                                'Numero aleatório: ${valueWS['value']}',
                                 style: const TextStyle(
                                   color: Colors.black87,
                                 ),
