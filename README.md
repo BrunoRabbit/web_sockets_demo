@@ -1,16 +1,23 @@
 # web_sockets_demo
 
-A new Flutter project.
+Simple app with objective to ***demonstrate*** the use of the locally websocket using a server in javascript
+## JSON Preview
+```json 
+{
+  "object":{
+     "nome":"Web Sockets Demonstration",
+     "data":"27/03/2023",
+     "value":9
+  }
+}
+```
+## Install
+- Clone repository ```git clone https://github.com/BrunoRabbit/web_sockets_demo```
+- Install packages ```npm i``` or ```yarn```
+- ```flutter pub get``` to get flutter packages
+- Run server using ```cd server/``` and then ```node server.js```
+- Finally use a emulator or real device to run the Flutter project
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## App Preview
+ ![title](assets/image.png)
+ 
