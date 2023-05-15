@@ -10,7 +10,6 @@
 .svn/
 migrate_working_dir/
 node_modules/
-*.js
 *.env
 
 # IntelliJ related
