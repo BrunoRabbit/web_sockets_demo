@@ -1,4 +1,4 @@
-# web_sockets_demo
+# Objectives
 
 Simple app with objective to ***demonstrate*** the use of the locally websocket using a server in javascript
 ## JSON Preview
