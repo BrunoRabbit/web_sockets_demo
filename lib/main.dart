@@ -82,15 +82,40 @@ class _MyHomePageState extends State<MyHomePage> {
                 print(snapshot.connectionState);
 
                 if (snapshot.hasData) {
-                  final bytes = snapshot.data as List<int>;
+                  final message = jsonDecode(snapshot.data);
+                  return Expanded(
+                    child: ListView.builder(
+                      itemCount: message.length,
+                      itemBuilder: (context, index) {
+                        final valueWS = message['object1'];
 
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24.0),
-                    child: Text(
-                      'Mensagem recebida: ${bytes.convertToString()}',
-                      style: const TextStyle(
-                        color: Colors.black87,
-                      ),
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 24.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Mensagem recebida: ${valueWS['nome']}',
+                                style: const TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              Text(
+                                'Mensagem recebida: ${valueWS['value']}',
+                                style: const TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              Text(
+                                'Data: ${valueWS['data']}',
+                                style: const TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                     ),
                   );
                 } else {
@@ -111,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _sendMessage() {
     if (_controller.text.isNotEmpty) {
-        channel.sink.add(_controller.text);
+      channel.sink.add(_controller.text);
     }
   }
 }
