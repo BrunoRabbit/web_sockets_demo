@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: ListView.builder(
                       itemCount: message.length,
                       itemBuilder: (context, index) {
-                        final valueWS = message['object1'];
+                        final valueWS = message['object'];
 
                         return Padding(
                           padding: const EdgeInsets.symmetric(vertical: 24.0),
